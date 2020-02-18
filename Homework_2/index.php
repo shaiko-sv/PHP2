@@ -21,10 +21,10 @@
     echo "Сравнивание подключения<br>spl_object_id<br>";
     echo '$conn1 id = '. spl_object_id ( $conn1 );
     echo "<br>";
-    echo '$conn1 id = '. spl_object_id ( $conn2 );
+    echo '$conn2 id = '. spl_object_id ( $conn2 );
     echo "<br>";
     echo "Сравнивание подключения<br>spl_object_hash<br>";
     echo '$conn1 hash = '. spl_object_hash ( $conn1 );
     echo "<br>";
-    echo '$conn1 hash = '. spl_object_hash ( $conn2 );
+    echo '$conn2 hash = '. spl_object_hash ( $conn2 );
     echo "<br>";
