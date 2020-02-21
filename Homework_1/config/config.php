@@ -6,6 +6,7 @@ const CONTROLLER_PATH = ROOT. "/controllers/";
 const MODEL_PATH = ROOT. "/models/";
 const VIEW_PATH = ROOT. "/views/";
 const TEMPLATES_PATH = ROOT. "/templates/";
+const UPLOAD_FOLDER = ROOT. "/uploads/";
 
 require_once "DB.php";
 require_once "route.php";
@@ -23,6 +24,8 @@ const JQUERY_UNCOMPRESSED = 'https://code.jquery.com/jquery-3.4.1.js" integrity=
 const JQUERY_MINIFIED = 'https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"';
 const VUEJS_DEV = "https://cdn.jsdelivr.net/npm/vue/dist/vue.js";
 const VUEJS_PROD = "https://cdn.jsdelivr.net/npm/vue";
+const ANGULAR_MINIFIED = 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js';
+const ANGULAR_ROUTE = 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js';
 
 //Style
 const CSS_FOLDER = "/public/css/";

@@ -56,5 +56,12 @@ foreach ($pageData['js_head'] as $script):?>
     <script src="<?= JS_FOLDER . $script; ?>"></script>
 <?php endforeach;?>
 <?php endif;?>
+    <?php if(count($pageData['js_head'])):?>
+        <?php
+//External scripts
+        foreach ($pageData['js_foot'] as $script):?>
+            <script src="<?= $script?>"></script>
+        <?php endforeach;?>
+    <?php endif;?>
 </body>
 </html>

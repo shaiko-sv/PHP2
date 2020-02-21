@@ -19,14 +19,12 @@ class IndexController extends Controller {
         $this->pageData['headers'] = [VIEW_PATH. "header.tpl.php",];
         $this->pageData['navs'] = [];
 
-        $product1 = new ProductController(1);
-        $product2 = new ProductController(2);
-        $product3 = new ProductController(3);
-        $product4 = new ProductController(4);
-        $this->pageData['contents'] = [$product1,$product2,$product3,$product4];
+        $catalog = new CatalogController();
+        $this->pageData['contents'] = [$catalog];
         $this->pageData['footers'] = [];
 
         $this->pageData['js'] = [JS];
+        $this->pageData['js_foot'] = [ANGULAR_MINIFIED, ANGULAR_ROUTE];
 
 //        if(!empty($_POST)) {
 //            if(!$this->login()) {

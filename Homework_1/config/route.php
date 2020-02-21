@@ -37,6 +37,8 @@ class Routing {
          require_once MODEL_PATH . $modelName . ".php"; // IndexModel.php
          require_once CONTROLLER_PATH . "ProductController.php";
          require_once MODEL_PATH . "ProductModel.php";
+        require_once CONTROLLER_PATH . "CatalogController.php";
+        require_once MODEL_PATH . "CatalogModel.php";
 
          $controller = new $controllerName();
          $controller->$action(); // $controller->index()
