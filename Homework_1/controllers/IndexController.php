@@ -6,7 +6,7 @@ class IndexController extends Controller {
 
     public function __construct()
     {
-        $this->model = new IndexModel();
+        $this->model = new GalleryModel();
         $this->view = new View();
     }
 
