@@ -2,7 +2,19 @@
 
 class View {
 
-    public function render($template, $content)
+    public function render($tpl, $pageData) {
+        include VIEW_PATH. $tpl;
+    }
+
+    public function preRender($tpl, $pageData) {
+        echo $tpl;
+    }
+    /*
+     * Method for Twig rendering
+     * @template -> template name
+     * @content -> content data
+     */
+    public function renderTwig($template, $content)
     {
         try {
 

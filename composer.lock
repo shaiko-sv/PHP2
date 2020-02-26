@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "843b04df5fdfe76251025001d66e0fd2",
+    "content-hash": "e4c8fdbf01323a4975aac9ea2027d2a2",
     "packages": [
         {
             "name": "symfony/polyfill-ctype",
@@ -125,16 +125,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.12.5",
+            "version": "2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "18772e0190734944277ee97a02a9a6c6555fcd94"
+                "reference": "0da153eb3b843d1117e52c882df6f40aefb954ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/18772e0190734944277ee97a02a9a6c6555fcd94",
-                "reference": "18772e0190734944277ee97a02a9a6c6555fcd94",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/0da153eb3b843d1117e52c882df6f40aefb954ab",
+                "reference": "0da153eb3b843d1117e52c882df6f40aefb954ab",
                 "shasum": ""
             },
             "require": {
@@ -186,13 +186,15 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2020-02-11T15:31:23+00:00"
+            "time": "2020-02-23T08:42:25+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "twig/twig": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

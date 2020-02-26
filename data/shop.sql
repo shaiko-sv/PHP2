@@ -16,21 +16,41 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `images`
+-- Table structure for table `products`
 --
 
-DROP TABLE IF EXISTS `images`;
+DROP TABLE IF EXISTS `products`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `images` (
+CREATE TABLE `products` (
+  `id_product` int(11) NOT NULL AUTO_INCREMENT,
+  `product_name` varchar(45) NOT NULL,
+  `price` int(11) DEFAULT NULL,
+  `img` varchar(45) DEFAULT NULL,
+  `create_date` datetime DEFAULT CURRENT_TIMESTAMP,
+  `counter` int(11) DEFAULT NULL,
+  `description` text,
+  PRIMARY KEY (`id_product`)
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `file_name` varchar(255) NOT NULL,
-  `ext` varchar(4) NOT NULL,
-  `info` text NOT NULL,
-  `date_create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `counter` int(11) NOT NULL DEFAULT '0',
+  `login` varchar(100) NOT NULL,
+  `pass` varchar(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `surename` varchar(45) DEFAULT NULL,
+  `email` varchar(100) NOT NULL,
+  `created` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -42,4 +62,4 @@ CREATE TABLE `images` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-02-22 21:14:09
+-- Dump completed on 2020-02-26 22:05:05

@@ -1,10 +1,8 @@
 <?php
 
-require_once 'GalleryController.php';
-
 class IndexController extends Controller {
 
-    private $pageTpl = 'base.tmpl';
+    private $pageTpl = "base.tpl.php";
 
     public function __construct()
     {
@@ -14,13 +12,31 @@ class IndexController extends Controller {
 
 
     public function index() {
+//        if(!$_SESSION['user']) {
+//            header("Location: /");
+//        }
 
-        $gallery = new GalleryController();
-        $content = ['title' => 'Главная',
-            'content' => $gallery->index(),
-        ];
+        $this->pageData['title'] = COMPANY_NAME_FULL;
+        $this->pageData['styles'] = [CSS_NORMALIZE, CSS_MAIN];
+        $this->pageData['js_head'] = [JQUERY_UNCOMPRESSED];
 
-        $this->view->render($this->pageTpl, $content);
+        $this->pageData['headers'] = [VIEW_PATH. "header.tpl.php",];
+        $this->pageData['navs'] = [];
+
+        $catalog = new CatalogController();
+        $this->pageData['contents'] = [$catalog];
+        $this->pageData['footers'] = [];
+
+        $this->pageData['js'] = [JS_VUE_ERROR, JS_VUE, JS_MAIN,];
+        $this->pageData['js_foot'] = [ANGULAR_MINIFIED, ANGULAR_ROUTE, VUEJS_DEV];
+
+//        if(!empty($_POST)) {
+//            if(!$this->login()) {
+//                $this->pageData['error'] = "Неправильный логин или пароль";
+//            }
+//        }
+
+        $this->view->render($this->pageTpl, $this->pageData);
 
     }
 
