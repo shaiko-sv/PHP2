@@ -21,7 +21,6 @@ class IndexController extends Controller {
         $this->pageData['navs'] = [];
 
         $catalog = new CatalogController();
-        ChromePhp::log($catalog);
         $this->pageData['contents'] = [$catalog];
         $this->pageData['footers'] = [];
 

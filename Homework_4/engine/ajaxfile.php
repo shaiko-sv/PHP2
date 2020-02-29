@@ -33,7 +33,6 @@ if($table == 'products'){
        $rowCount = $_GET['rowCount'];
        $sql = "SELECT * FROM $table WHERE $condition LIMIT $offset, $rowCount";
    }
-    ChromePhp::log('$sql = ',$sql);
    $userData = mysqli_query($con,$sql);
 }
 

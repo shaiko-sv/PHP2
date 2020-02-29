@@ -13,7 +13,6 @@ class LoginController extends Controller {
 
 
     public function index() {
-        ChromePhp::log($_POST);
         if(!empty($_POST)) {
             if(!$this->login()) {
                 $this->content['error'] = "Неправильный логин или пароль";

@@ -52,7 +52,6 @@ class IndexModel extends Model {
 
             $response[] = $row;
         }
-        ChromePhp::log('$response = ',$response);
 
         return $response;
     }

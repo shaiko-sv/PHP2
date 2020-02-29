@@ -10,9 +10,10 @@ $con = mysqli_connect(SERVER, USER, PASS, DB);
 // Check connection
 if (!$con) {
     die(ChromePhp::log("Connect failed:".mysqli_connect_error()));
-} else {
-    ChromePhp::log("Подключен к базе данный '".DB."'");
 }
+//else {
+//    ChromePhp::log("Подключен к базе данный '".DB."'");
+//}
 
 $table = $_GET['table']??'images';
 if($table == 'products'){
@@ -33,7 +34,6 @@ if($table == 'products'){
        $rowCount = $_GET['rowCount'];
        $sql = "SELECT * FROM $table WHERE $condition LIMIT $offset, $rowCount";
    }
-    ChromePhp::log('$sql = ',$sql);
    $userData = mysqli_query($con,$sql);
 }
 
@@ -53,6 +53,5 @@ while($row = mysqli_fetch_assoc($userData)){
 
    $response[] = $row;
 }
-ChromePhp::log(json_encode($response));
 echo json_encode($response);
 exit;

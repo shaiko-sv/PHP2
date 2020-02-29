@@ -59,7 +59,6 @@ class CatalogController extends Controller {
     }
 
     public function editCatalog() {
-        print_r($_SESSION);
         if(!$_SESSION['user']) {
             header("Location: /");
         }
@@ -68,14 +67,12 @@ class CatalogController extends Controller {
 
     public function ajaxRequest() {
         $table = $_GET['table']??'';
-        ChromePhp::log('CatalogController Line 71 $table == \'products\'', $table == 'products');
         if($table == 'products'){
             $condition = "1";
             if(isset($_GET['id_product'])){
                 $condition = " id_product=".$_GET['id_product'];
             }
             $conn = $this->model->db;
-            ChromePhp::log('CatalogController Line 76 $db = ', $conn);
             $userData = mysqli_query($conn,"SELECT * FROM ".$table." WHERE ".$condition);
         }
 
