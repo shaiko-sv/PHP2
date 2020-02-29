@@ -1,6 +1,7 @@
 <?php
-session_start();
+session_start(); // Включаем сессию для пользователя
 
+// Определяем константы путей к контроллерам, моделям и пр.
 define("ROOT", $_SERVER['DOCUMENT_ROOT']);
 const CONTROLLER_PATH = ROOT. "/controllers/";
 const MODEL_PATH = ROOT. "/models/";
@@ -14,10 +15,9 @@ require_once VENDOR_PATH . 'autoload.php';
 require_once "DB.php";
 require_once "dbPDO.php";
 require_once "route.php";
-include_once "ChromePhp.php"; //ChromePhp::log()
-require_once CONTROLLER_PATH. 'Controller.php';
-require_once MODEL_PATH. 'Model.php';
-require_once VIEW_PATH. 'View.php';
+//require_once CONTROLLER_PATH. 'Controller.php';
+//require_once MODEL_PATH. 'Model.php';
+//require_once VIEW_PATH. 'View.php';
 
 const COMPANY_NAME_SHORT = "Shop";
 const COMPANY_NAME_FULL = "Ice Cream Shop";
