@@ -5,6 +5,9 @@
             </div>
             <div class="login">
                 <a href="/login">
-                    <button type="submit">Login</button>
+                    <button type="submit">Вход</button>
+                </a>
+                <a href="/register">
+                    <button type="submit">Регистрация</button>
                 </a>
             </div>

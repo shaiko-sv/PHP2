@@ -15,6 +15,7 @@ class CabinetController extends Controller {
         if(!$_SESSION['user']){
             header("Location: /login");
         }
+        $this->pageData['user'] = $_SESSION['user'];
         $this->pageData['title'] = "Кабинет";
 
 //        $ordersCount = $this->model->getOrdersCount();

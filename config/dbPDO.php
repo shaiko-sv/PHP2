@@ -24,6 +24,9 @@ class DB_PDO
             return new
             PDO("$driver:host=$host;dbname=$db_name;charset=$charset",
                 $db_user, $db_pass, $options);
+            ChromePhp::log(new
+            PDO("$driver:host=$host;dbname=$db_name;charset=$charset",
+                $db_user, $db_pass, $options));
         } catch (PDOException $e) {
             die("Не могу подключиться к базе данных");
         }

@@ -47,6 +47,7 @@ Vue.component('products', {
         },
     },
     mounted() {
+        console.log('ProductsComponent');
         this.$parent.getJson(`../engine/ajaxfile.php?table=products&limit=${this.rowCount}`)
             .then(data => {
                 for(let el of data){

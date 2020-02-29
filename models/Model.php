@@ -1,7 +1,7 @@
 <?php
 class Model {
     public $db;
-    protected $db_pdo;
+    public $db_pdo;
 
     public function __construct()
     {

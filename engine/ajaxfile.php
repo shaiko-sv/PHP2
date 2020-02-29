@@ -1,5 +1,5 @@
 <?php
-include_once "ChromePhp.php";
+include_once "../config/ChromePhp.php";
 const SERVER = "localhost";
 const USER = "root";
 const PASS = "root";
@@ -53,6 +53,6 @@ while($row = mysqli_fetch_assoc($userData)){
 
    $response[] = $row;
 }
-
+ChromePhp::log(json_encode($response));
 echo json_encode($response);
 exit;

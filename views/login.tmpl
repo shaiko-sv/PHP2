@@ -23,9 +23,7 @@
                     <img class="profile-img" src="img/icons/user-start.png"
                          alt="">
                     <form action="login/login" class="form-signin" id="form-signin" method="post">
-                        {% if error %}
                             <p>{{ error }}</p>
-                        {% endif %}
                         <input type="text" class="form-control" name="login" id="login" placeholder="Логин" required autofocus>
                         <input type="password" name="password" id="password" class="form-control" placeholder="Пароль" required>
                         <button class="btn btn-lg btn-primary btn-block" type="submit">
@@ -37,9 +35,10 @@
                         <a href="#" class="pull-right need-help">Помощь? </a><span class="clearfix"></span>
                     </form>
                 </div>
-                <a href="#" class="text-center new-account">Регистрация</a>
+                <a href="/register" class="text-center new-account">Регистрация</a>
             </div>
         </div>
+    </div>
 </div>
 
 <footer>

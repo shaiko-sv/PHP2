@@ -14,7 +14,7 @@ require_once VENDOR_PATH . 'autoload.php';
 require_once "DB.php";
 require_once "dbPDO.php";
 require_once "route.php";
-include_once "ChromePhp.php";
+include_once "ChromePhp.php"; //ChromePhp::log()
 require_once CONTROLLER_PATH. 'Controller.php';
 require_once MODEL_PATH. 'Model.php';
 require_once VIEW_PATH. 'View.php';
