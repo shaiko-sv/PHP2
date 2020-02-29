@@ -11,11 +11,10 @@
 
 spl_autoload_register("autoload");
 
-/*
- * Autoload function
- * @dirs array of directories you have classes
- *
+/**
+ * @param $className
  * @return bool
+ * @throws Exception
  */
 function autoload($className)
 {
@@ -33,7 +32,10 @@ function autoload($className)
 
             require_once ($fileName);
             $found = true;
+            ChromePhp::log('autoload.php line 36: ', $fileName, ' ', $found);
+            break; // добавил для оптимизации поиска
         }
+        ChromePhp::log('autoload.php line 39: ', $fileName, ' ', $found);
     }
     if (!$found) {
         throw new Exception('Unable to load ' . $className);
