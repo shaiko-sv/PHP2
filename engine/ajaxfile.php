@@ -1,19 +1,13 @@
 <?php
 include_once "../config/ChromePhp.php";
-const SERVER = "localhost";
-const USER = "root";
-const PASS = "root";
-const DB = "shop";
+require_once "../config/DB.php";
 
-
-$con = mysqli_connect(SERVER, USER, PASS, DB);
+//$con = mysqli_connect(SERVER, USER, PASS, DB);
+$con = DB::connToDB();
 // Check connection
 if (!$con) {
     die(ChromePhp::log("Connect failed:".mysqli_connect_error()));
 }
-//else {
-//    ChromePhp::log("Подключен к базе данный '".DB."'");
-//}
 
 $table = $_GET['table']??'images';
 if($table == 'products'){
@@ -32,7 +26,8 @@ if($table == 'products'){
    if(isset($_GET['offset']) && isset($_GET['rowCount'])) {
        $offset = $_GET['offset'];
        $rowCount = $_GET['rowCount'];
-       $sql = "SELECT * FROM $table WHERE $condition LIMIT $offset, $rowCount";
+       $offset2 = $offset + $rowCount;
+       $sql = "SELECT * FROM $table WHERE (id_product > $offset) AND (id_product < $offset2) LIMIT $offset";
    }
    $userData = mysqli_query($con,$sql);
 }
