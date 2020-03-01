@@ -33,6 +33,7 @@ Vue.component('products', {
                 offset=${this.offset}&
                 rowCount=${this.rowCount}`)
                 .then(data => {
+                    //TODO: добавить проверку на пустой JSON и взязать с показом кнопки Показать ещё...
                     for(let el of data){
                         this.products.push(el);
                         this.allProducts.push(el);

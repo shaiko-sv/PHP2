@@ -12,17 +12,16 @@ const VENDOR_PATH = ROOT. "/vendor/";
 
 // подгружаем и активируем авто-загрузчик Twig-a
 require_once VENDOR_PATH . 'autoload.php';
+
 require_once "DB.php";
 require_once "dbPDO.php";
 require_once "route.php";
-//require_once CONTROLLER_PATH. 'Controller.php';
-//require_once MODEL_PATH. 'Model.php';
-//require_once VIEW_PATH. 'View.php';
 
+// название компании длинное и короткое
 const COMPANY_NAME_SHORT = "Shop";
 const COMPANY_NAME_FULL = "Ice Cream Shop";
 
-//Scripts
+// Scripts
 const JS_FOLDER = "js/";
 const JS_MAIN = "main.js";
 const JS_VUE = "ProductsComponent.js";
@@ -34,21 +33,21 @@ const VUEJS_PROD = "https://cdn.jsdelivr.net/npm/vue";
 const ANGULAR_MINIFIED = 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js';
 const ANGULAR_ROUTE = 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js';
 
-//Style
+// Style
 const CSS_FOLDER = "css/";
 const CSS_NORMALIZE = "normalize.css";
 const CSS_MAIN = "style.css";
 
-//Packages
+// Packages
 const BOOTSTRAP_CSS = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css";
 const BOOTSTRAP_JQUERY = "https://code.jquery.com/jquery-3.4.1.slim.min.js";
 const BOOTSTRAP_POPPER = "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js";
 const BOOTSTRAP_JS = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js";
 
-//Images
+// Images
 const ICON = "favicon.png";
 
-//Fonts
+// Fonts
 const FONTAWASOME_JS = 'https://kit.fontawesome.com/ab97d34a37.js" crossorigin="anonymous"';
 const FA_PREFIX = "fas";
 const FA_BRAND = "fab";
@@ -61,4 +60,5 @@ const CHARSET = "utf-8";
 //images folder
 const IMAGES_FOLDER = "img/";
 
+// запускаем роутер
 Routing::buildRoute();
