@@ -8,7 +8,7 @@ Vue.component('products', {
             imgCatalog: "img/",
             filtered: [],
             offset: 0,
-            rowCount: 8,
+            rowCount: 5,
         }
     },
     methods: {
@@ -31,7 +31,7 @@ Vue.component('products', {
             this.$parent.getJson(`../engine/ajaxfile.php?
                 table=products&
                 offset=${this.offset}&
-                rowCount=${this.rowCount}`)
+                rowCount=${this.rowCount + 1}`)
                 .then(data => {
                     //TODO: добавить проверку на пустой JSON и взязать с показом кнопки Показать ещё...
                     for(let el of data){
@@ -39,6 +39,7 @@ Vue.component('products', {
                         this.allProducts.push(el);
                     }
                 })
+            console.log(this.offset, this.rowCount);
         },
         openDescription(id){
             this.$parent.getJson(`/catalog/ajaxRequest?table=products&id_product=${id}`)
@@ -48,21 +49,13 @@ Vue.component('products', {
         },
     },
     mounted() {
-        this.$parent.getJson(`../engine/ajaxfile.php?table=products&limit=${this.rowCount}`)
+        this.$parent.getJson(`catalog/ajaxRequest?table=products&limit=${this.rowCount}`)
             .then(data => {
                 for(let el of data){
                     this.products.push(el);
                     this.allProducts.push(el);
                 }
             })
-        // this.$parent.JQueryAXAJ("../engine/ajaxfile.php", "products")
-        //     .then(data => {
-        //         console.log(data);
-        //         for(let el of data){
-        //             this.products.push(el);
-        //             this.allProducts.push(el);
-        //         }
-        //     })
     },
     template: `<div class="wrapper">
 <div class="products">
