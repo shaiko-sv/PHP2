@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+        <base href="/cabinet/products/">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
@@ -164,8 +165,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card mb-4">
+                        <div class="card mb-4" data-ng-app="products" data-ng-controller="productsController">
                             <div class="card-header"><i class="fas fa-table mr-1"></i>Products</div>
+                            <div class="col-lg-12" data-ng-view="">{{ myData }}</div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -195,7 +197,7 @@
                                             <?php foreach ($pageData['products'] as $key => $product) :?>
                                                 <tr>
                                                     <td><?=$product['id_product']?></td>
-                                                    <td><?=$product['product_name']?></td>
+                                                    <td><a href="<?php echo $product['id_product'];?>"><?=$product['product_name']?></a></td>
                                                     <td><?=$product['price']?></td>
                                                     <td><?=$product['img']?></td>
                                                     <td><?=$product['create_date']?></td>
@@ -236,7 +238,12 @@
         </div>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="/packages/angular.js"></script>
+        <script src="/packages/angular-route.js"></script>
+
+        <script src="/js/admin/app.js"></script>
         <script src="/js/products.js"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="/js/chart-area-demo.js"></script>
         <script src="/js/chart-bar-demo.js"></script>
