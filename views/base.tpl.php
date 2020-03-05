@@ -21,7 +21,7 @@ foreach ($pageData['js_head'] as $script):?>
     <link rel="shortcut icon" href="<?=ICON?>" type="image/x-icon">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="app">
 <?php if(count($pageData['headers'])) :?>
         <header>
 <?php foreach ($pageData['headers'] as $header) {

@@ -24,7 +24,7 @@ class IndexController extends Controller {
         $this->pageData['contents'] = [$catalog];
         $this->pageData['footers'] = [];
 
-        $this->pageData['js'] = [JS_VUE_ERROR, JS_VUE, JS_MAIN,];
+        $this->pageData['js'] = [JS_VUE_ERROR, JS_VUE, JS_VUE2, JS_MAIN,];
         $this->pageData['js_foot'] = [ANGULAR_MINIFIED, ANGULAR_ROUTE, VUEJS_DEV];
 
         $this->view->render($this->pageTpl, $this->pageData);

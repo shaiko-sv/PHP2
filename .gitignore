@@ -75,3 +75,9 @@ fabric.properties
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
+/vendor/
+.DS_Store
+Homework_1/uploads/
+Homework_3/.DS_Store
+Homework_3/img/.DS_Store
+/vendor/composer/

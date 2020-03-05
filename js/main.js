@@ -8,16 +8,5 @@ const app = new Vue({
                 .then(result => result.json())
                 .catch(error => this.$refs.error.setText(error))
         },
-        JQueryAXAJ(url, table){
-            $.ajax({
-                url: url,
-                dataType: "json",
-                methods: "GET",
-                data: {"table": table},
-                success: function (data) {
-                    console.log(data)
-                }
-            })
-        }
     },
 });

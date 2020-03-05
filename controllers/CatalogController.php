@@ -66,10 +66,9 @@ class CatalogController extends Controller {
     }
 
     public function ajaxRequest() {
-        //$con = mysqli_connect(SERVER, USER, PASS, DB);
-        //$con = DB::connToDB();
         $con = $this->model->db;
-// Check connection
+
+        // Check connection
         if (!$con) {
             die(ChromePhp::log("Connect failed:".mysqli_connect_error()));
         }
