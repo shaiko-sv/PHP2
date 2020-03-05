@@ -102,7 +102,7 @@ img {
   background-color: white;
   padding: 20px;
   color: black;
-  width: 300px;
+  width: 330px;
 }
 
 .wrapper {
@@ -161,13 +161,15 @@ img {
 }
 
 .cart-item img {
+  width: 100px;
+  height: 100px;
   align-self: flex-start;
   margin-right: 15px;
 }
 
 .product-single-price {
   color: #474747;
-  font-size: 0.5em;
+  font-size: 0.75em;
 }
 
 .product-price {
@@ -180,7 +182,7 @@ img {
 
 .product-quantity {
   margin-top: 15px;
-  font-size: 0.75em;
+  font-size: 1.25em;
 }
 
 .right-block {
