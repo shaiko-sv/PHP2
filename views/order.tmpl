@@ -1,0 +1,14 @@
+<div class="cart-block">
+    <h1>{{ title }}</h1>
+    {% set total = 0 %}
+    {% for cartItem in cartItems %}
+        <h3>{{ cartItem.product_name }}</h3>
+        <p>{{ cartItem.quantity }} шт. | {{ cartItem.price }} $ за шт.</p>
+        <p>Всего {{ cartItem.price * cartItem.quantity }} $</p>
+        {% set total = total + cartItem.price * cartItem.quantity %}
+    {% endfor %}
+    <h3>Всег {{ total }} $</h3>
+    <a href="/order/confirmOrder">
+        <button>Подтвердить заказ</button>
+    </a>
+</div>
