@@ -25,6 +25,7 @@ const COMPANY_NAME_FULL = "Ice Cream Shop";
 const JS_FOLDER = "js/";
 const JS_MAIN = "main.js";
 const JS_VUE = "ProductsComponent.js";
+const JS_VUE2 = "CartComponent.js";
 const JS_VUE_ERROR = "ErrorComponent.js";
 const JQUERY_UNCOMPRESSED = 'https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"';
 const JQUERY_MINIFIED = 'https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"';
