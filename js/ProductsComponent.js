@@ -2,7 +2,7 @@ Vue.component('products', {
     data() {
         return {
             //catalogUrl: `/catalog/ajaxRequest?id=`,
-            catalogUrl: `/engine/ajaxfile.php?id=`,
+            catalogUrl: `product?id=`,
             products: [],
             allProducts: [],
             imgCatalog: "img/",
@@ -28,7 +28,7 @@ Vue.component('products', {
         },
         showMoreProducts(){
             this.offset += this.rowCount;
-            this.$parent.getJson(`../engine/ajaxfile.php?
+            this.$parent.getJson(`catalog/ajaxRequest?
                 table=products&
                 offset=${this.offset}&
                 rowCount=${this.rowCount + 1}`)
@@ -42,7 +42,7 @@ Vue.component('products', {
             console.log(this.offset, this.rowCount);
         },
         openDescription(id){
-            this.$parent.getJson(`/catalog/ajaxRequest?table=products&id_product=${id}`)
+            this.$parent.getJson(`catalog/ajaxRequest?table=products&id_product=${id}`)
                 .then(data => {
                     console.log(data);
                 })

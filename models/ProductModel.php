@@ -8,15 +8,16 @@ class ProductModel extends Model {
     private $name;
     private $price;
     private $img;
+    private $description;
 
-    public function __construct($id)
+    public function __construct()
     {
-        $this->db = DB::connToDB();
-        $res = $this->getProductByID($id);
-        $this->setId($id);
-        $this->setName($res['product_name']);
-        $this->setPrice($res['price']);
-        $this->setImg(IMAGES_FOLDER. $res['img']);
+//        $this->db = DB::connToDB();
+//        $res = $this->getProductByID($id);
+//        $this->setId($id);
+//        $this->setName($res['product_name']);
+//        $this->setPrice($res['price']);
+//        $this->setImg(IMAGES_FOLDER. $res['img']);
     }
 
     /**
@@ -84,16 +85,41 @@ class ProductModel extends Model {
         return $this->img;
     }
 
-    public function getProductByID($id){
+    /**
+     * @param string $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    public function getProductByID($id)
+    {
         $sql = "SELECT * FROM products WHERE id_product = ". $id;
+        $this->db = DB::connToDB();
         $conn = $this->db;
 
         $query = mysqli_query($conn, $sql);
 
-        return mysqli_fetch_assoc($query);
+        $res = mysqli_fetch_assoc($query);
+
+        $this->setId($id);
+        $this->setName($res['product_name']);
+        $this->setPrice($res['price']);
+        $this->setImg(IMAGES_FOLDER. $res['img']);
+        $this->setDescription($res['description']);
     }
 
-    public function filter($value) {
+    public function filter($value)
+    {
 
     }
 }
