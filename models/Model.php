@@ -1,4 +1,5 @@
 <?php
+
 class Model {
     public $db;
     public $db_pdo;

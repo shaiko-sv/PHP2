@@ -114,12 +114,8 @@ class ProductModel extends Model {
         $this->setId($id);
         $this->setName($res['product_name']);
         $this->setPrice($res['price']);
-        $this->setImg(IMAGES_FOLDER. $res['img']);
+        //$this->setImg(IMAGES_FOLDER. $res['img']);
+        $this->setImg($res['img']);
         $this->setDescription($res['description']);
-    }
-
-    public function filter($value)
-    {
-
     }
 }

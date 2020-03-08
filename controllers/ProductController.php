@@ -1,7 +1,5 @@
 <?php
 
-
-
 class ProductController extends Controller {
 
     private $pageTpl = "product.tpl.php";

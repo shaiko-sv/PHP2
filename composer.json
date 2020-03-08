@@ -1,6 +1,8 @@
 {
     "require": {
         "twig/twig": "2.x-dev",
-        "phpunit/phpunit": "9.0.1"
+        "yiisoft/yii2": "3.0.x-dev",
+        "phpunit/phpunit": "7.5.20",
+        "phpunit/dbunit": "4.0.0"
     }
 }
